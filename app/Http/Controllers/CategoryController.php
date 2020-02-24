@@ -20,18 +20,12 @@ class CategoryController extends Controller
     }
 
     public function store(Request $request){
-        $data =  new Article();
-        $data->title            = "Judul1";
-        $data->description      = "Desc1";
-        $data->source           = "sourcec1";
-        $data->image_source     = "image_source1";
-        $data->image_caption    = "image_caption1";
-        $data->link             = "link1";
-        $data->alias            = "alias1";
+        $data =  new Category();
+        $data->title            = $request->get('title');
+        $data->status           = $request->get('status');
         $data->save();
 
-        echo "test";
-        //return redirect()->route('article.index');
+        return redirect()->route('category');
     }
 
     public function edit()

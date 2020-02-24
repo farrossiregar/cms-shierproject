@@ -22,9 +22,9 @@ Route::get('article', 'ArticleController@index')->name('article');
 //Route::get('index-article', 'ArticleController@index')->name('index-article');
 Route::get('article/add', 'ArticleController@add')->name('article/add');
 Route::post('store-article', 'ArticleController@store')->name('store_article');
-Route::get('article/edit/{alias}', 'ArticleController@edit')->name('article/edit/');
-Route::post('update-article', 'ArticleController@update')->name('update_article');
-Route::post('delete-article-{alias}', 'ArticleController@delete')->name('delete_article');
+Route::get('article/edit/{id}', 'ArticleController@edit')->name('article/edit/');
+Route::post('article/update/{id}', 'ArticleController@update')->name('article/update/');
+Route::post('article/delete/{id}', 'ArticleController@delete')->name('article/delete/');
 
 
 Route::get('index-image', 'ImageController@index')->name('index-image');
@@ -33,10 +33,10 @@ Route::post('store-image', 'ImageController@store')->name('store_image');
 Route::get('edit-image/{id}', 'ImageController@edit')->name('edit_image');
 
 
-Route::get('index-category', 'CategoryController@index')->name('index-category');
-Route::get('add-category', 'CategoryController@add')->name('add_category');
-Route::post('store-category', 'CategoryController@store')->name('store_category');
-Route::get('edit-category/{id}', 'CategoryController@edit')->name('edit_category');
+Route::get('category', 'CategoryController@index')->name('category');
+Route::get('category/add', 'CategoryController@add')->name('category/add');
+Route::post('category/store', 'CategoryController@store')->name('category/store');
+Route::get('category/edit/{id}', 'CategoryController@edit')->name('category/edit');
 
 Route::get('api-index-article', 'ApiController@index')->name('api-index-article');
 	

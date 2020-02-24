@@ -39,7 +39,7 @@
         <div class="card-panel">
             <div class="row">
                 <div class="col l12 m12">
-                    <a href="{{ route('add_category') }}" class="waves-effect waves-dark btn blue"><i></i> Tambah</a>
+                    <a href="{{ route('category/add') }}" class="waves-effect waves-dark btn blue"><i></i> Tambah</a>
                 </div>
             </div>
             <table id="table_data_article" class="display table table-striped table-hover"> 
@@ -58,8 +58,8 @@
                         <td>{{ $item->title }}</td> 
                         <td>{{ $item->status }}</td>
                         <td>
-                            <span><a href="{{ route('edit_category', $item->id) }}" class="btn yellow"><i class="fa fa-edit"></i></a></span>
-                            <span><a href="{{ route('add_article') }}" class="btn red"><i class="mdi-action-delete"></i></a></span>
+                            <span><a href="{{ route('category/edit', $item->id) }}" class="btn yellow"><i class="fa fa-edit"></i></a></span>
+                            <span><a href="{{ route('category/add') }}" class="btn red"><i class="mdi-action-delete"></i></a></span>
                         </td>
                     </tr> 
                     @endforeach

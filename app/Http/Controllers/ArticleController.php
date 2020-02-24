@@ -19,9 +19,9 @@ class ArticleController extends Controller
         return view('article.create');
     }
 
-    public function edit($alias)
+    public function edit($id)
     {
-        $params['data'] = Article::where('alias', $alias)->first();
+        $params['data'] = Article::where('id', $id)->first();
         return view('article.edit')->with($params);
     }
 
@@ -42,7 +42,7 @@ class ArticleController extends Controller
         //     $data->publish_date     = '0000-00-00 00:00:00';
         // }
         $data->save();
-        return redirect()->route('article.index');
+        return redirect()->route('article');
     }
 
     public function delete($alias){
@@ -50,6 +50,14 @@ class ArticleController extends Controller
         $data->delete();
 
         return redirect()->route('article.index');
+    }
+
+    public function update(Request $request, $id){
+        $data = Article::where('id', $id)->first();
+        $data->title        = $request->get('title');
+        $data->save();
+
+        return redirect()->route('article');
     }
 
 

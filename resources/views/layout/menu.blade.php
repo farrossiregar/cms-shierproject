@@ -22,7 +22,7 @@
     </li>
 
     <li>
-        <a href="{{ route('index-category') }}" class=" waves-effect waves-blue"> <i class="fa fa-magic"></i> Categories </a>
+        <a href="{{ route('category') }}" class=" waves-effect waves-blue"> <i class="fa fa-magic"></i> Categories </a>
 
     </li>
 

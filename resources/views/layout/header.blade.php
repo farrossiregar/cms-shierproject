@@ -31,6 +31,10 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('bower_components/nvd3/build/nv.d3.min.css') }}" />
 
 
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/select2/css/select2.min.css') }}" /> 
+    <script type="text/javascript" src="{{ asset('assets/select2/js/select2.full.min.js') }}"></script>
+
+
 
 
 

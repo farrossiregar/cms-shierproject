@@ -44,46 +44,34 @@
                         <div class="row">
                             <div class="col l12 m12">
                                 <div class="input-field"> 
-                                    <label for="title">Title</label>
-                                    <input id="title" name="title" type="text" class="validate" placeholder="Placeholder"> 
+                                    <input id="title" name="title" type="text" class="validate" placeholder="Title"> 
                                 </div>
                             </div>
                             <div class="col l12 m12">
                                 <div class="input-field"> 
-                                    <select id="category_id" name="category_id"> 
+                                    <select id="category_id" name="category_id" class="browser-default"> 
                                         <option value="" disabled selected>Choose Category</option> 
-                                        <?php
-                                            //foreach(get_category_list() as $item)
-                                        ?>
-                                        <option value="1">Teknologi</option>
-                                        <option value="2">Entertainment</option>
-                                        <option value="3">Otomotif</option>
-                                        <option value="4">Traveling</option>
-                                        <?php
-                                            //endforeach
-                                        ?>
+                                        <option value="1">Anti Gaptek</option> 
+                                        <option value="2">Butuh Hiburan ?</option> 
+                                        <option value="3">Jalan-jalan yuk !</option> 
+                                        <option value="4">Belanja di mana</option> 
                                     </select>
                                 </div>
                             </div>
-                            
                             <div class="col l12 m12">
                                 <div class="input-field"> 
-                                    <label for="source">Source</label>
-                                    <input id="source" name="source" type="text" class="validate" placeholder="Placeholder"> 
+                                    <input id="source" name="source" type="text" class="validate" placeholder="Source"> 
                                 </div>
                             </div>
-
                             <div class="col l12 m12">
                                 <div class="input-field"> 
-                                    <label for="link">Link</label>
-                                    <input id="link" name="link" type="text" class="validate" placeholder="Placeholder"> 
+                                    <input id="link" name="link" type="text" class="validate" placeholder="Link"> 
                                 </div>
                             </div>
                         
                             <div class="col l12 m12">
-                                <h4>Description</h4>
+                                <h5>Description</h5>
                                 <textarea id="ckeditor1" name="description_article"></textarea>
-
                                 <br>
 
                                 <!-- <h4 id="ckeditor2" contenteditable="true">Inline CKEditor</h4>
@@ -116,8 +104,7 @@
                             </div>
                             <div class="col l12 m12">
                                 <div class="input-field"> 
-                                    <label for="image_caption">Image Caption</label>
-                                    <input id="image_caption" type="text" class="validate" placeholder="Image Caption" id="image_caption" name="image_caption"> 
+                                    <input id="image_caption" type="text" class="validate" id="image_caption" name="image_caption" placeholder="Image Caption"> 
                                 </div>
                             </div>
                         </div>

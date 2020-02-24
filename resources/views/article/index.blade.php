@@ -66,8 +66,8 @@
                         <td>{{ $item->link }}</td> 
                         <td>{{ $item->created_at }}</td> 
                         <td>
-                            <span><a href="{{ route('article/edit/', $item->alias) }}" class="btn yellow"><i class="fa fa-edit"></i></a></span>
-                            <form action="{{ route('delete_article', $item->alias) }}" method="post">
+                            <span><a href="{{ route('article/edit/', strval($item->id)) }}" class="btn yellow"><i class="fa fa-edit"></i></a></span>
+                            <form action="{{ route('article/delete/', $item->id) }}" method="post">
                             {{ csrf_field() }}
                             <span><button type="submit" class="btn red"><i class="mdi-action-delete"></i></button></span>
 

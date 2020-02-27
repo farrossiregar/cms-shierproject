@@ -36,7 +36,10 @@ Route::get('edit-image/{id}', 'ImageController@edit')->name('edit_image');
 Route::get('category', 'CategoryController@index')->name('category');
 Route::get('category/add', 'CategoryController@add')->name('category/add');
 Route::post('category/store', 'CategoryController@store')->name('category/store');
-Route::get('category/edit/{id}', 'CategoryController@edit')->name('category/edit');
+Route::get('category/edit/{id}', 'CategoryController@edit')->name('category/edit/');
+Route::post('category/edit/{id}', 'CategoryController@update')->name('category/update/');
+
 
 Route::get('api-index-article', 'ApiController@index')->name('api-index-article');
+Route::get('api-menu', 'ApiController@menu')->name('api-menu');
 	

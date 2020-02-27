@@ -20,7 +20,7 @@ class CategoryController extends Controller
     }
 
     public function store(Request $request){
-        $data =  new Category();
+        $data                   =  new Category();
         $data->title            = $request->get('title');
         $data->status           = $request->get('status');
         $data->save();
@@ -28,9 +28,19 @@ class CategoryController extends Controller
         return redirect()->route('category');
     }
 
-    public function edit()
+    public function edit($id)
     {
-        echo "test";
-        //return view('article.index');
+        $params['data'] = Category::where('id', $id)->first();
+        return view('category.edit')->with($params);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $data           = Category::where('id', $id)->first();
+        $data->title    = $request->get('title');
+        $data->status   = $request->get('status');
+        $data->save();
+
+        return redirect()->route('category');
     }
 }

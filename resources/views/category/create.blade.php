@@ -38,18 +38,15 @@
     <div class="row">
         <div class="card-panel">
             <form action="{{ route('category/store') }}" method="post">
+                {{ csrf_field() }}
                 <div class="row">
-                    {{ csrf_field() }}
                     <div class="col l6 m12">
                         <div class="row">
                             <div class="col l12 m12">
                                 <div class="input-field"> 
-                                    <label for="title">Title</label>
-                                    <input id="title" name="title" type="text" class="validate" placeholder="Title"> 
+                                    <input id="title" name="title" type="text" class="validate" placeholder="Title Category"> 
                                 </div>
                             </div>
-                              
-
                             <div class="col l12 m12">
                                 <p class="switch"> 
                                     <label> 

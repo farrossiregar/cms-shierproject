@@ -56,9 +56,16 @@
                     <tr> 
                         <td>{{ $item->id }}</td> 
                         <td>{{ $item->title }}</td> 
-                        <td>{{ $item->status }}</td>
+                        <?php 
+                            if($item->status == '1'){ 
+                                $status = '<div class="btn green" > Publish </div>'; 
+                            }else{
+                                $status = '<div class="btn red" > Arrchive </div>'; 
+                            } 
+                        ?>
+                        <td><?php echo $status; ?></td>
                         <td>
-                            <span><a href="{{ route('category/edit', $item->id) }}" class="btn yellow"><i class="fa fa-edit"></i></a></span>
+                            <span><a href="{{ route('category/edit/', $item->id) }}" class="btn yellow"><i class="fa fa-edit"></i></a></span>
                             <span><a href="{{ route('category/add') }}" class="btn red"><i class="mdi-action-delete"></i></a></span>
                         </td>
                     </tr> 

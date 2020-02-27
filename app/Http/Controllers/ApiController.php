@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Article;
+use App\Models\Category;
 
 class ApiController extends Controller
 {
@@ -25,6 +26,12 @@ class ApiController extends Controller
     {
         $data = Article::where('id', 1)->get();
         return json_encode($data);
+    }
+
+    public function menu()
+    {
+        $data = Category::all();
+        return response()->json($data);
     }
 
     

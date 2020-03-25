@@ -4,15 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\Article;
+use App\Models\Image;
 
 class ImageController extends Controller
 {
 
     public function index()
     {
-        $params['data'] = Article::all();
-        return view('article.index')->with($params);
+        $params['data'] = Image::all();
+        return view('image.index')->with($params);
     }
 
     public function add(){

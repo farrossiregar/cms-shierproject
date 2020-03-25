@@ -27,7 +27,7 @@
     </li>
 
     <li>
-        <a href="{{ route('index-image') }}" class=" waves-effect waves-blue"> <i class="fa fa-magic"></i> Bank Image </a>
+        <a href="{{ route('image') }}" class=" waves-effect waves-blue"> <i class="fa fa-magic"></i> Bank Image </a>
 
     </li>
     <li>

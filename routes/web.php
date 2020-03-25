@@ -27,10 +27,13 @@ Route::post('article/update/{id}', 'ArticleController@update')->name('article/up
 Route::post('article/delete/{id}', 'ArticleController@delete')->name('article/delete/');
 
 
-Route::get('index-image', 'ImageController@index')->name('index-image');
-Route::get('add-image', 'ImageController@add')->name('add_image');
-Route::post('store-image', 'ImageController@store')->name('store_image');
-Route::get('edit-image/{id}', 'ImageController@edit')->name('edit_image');
+Route::get('image', 'ImageController@index')->name('image');
+Route::get('image/add', 'ImageController@add')->name('image/add');
+Route::post('image/store', 'ImageController@store')->name('image/store/');
+Route::get('image/edit/{id}', 'ImageController@edit')->name('image/edit/');
+Route::post('image/update/{id}', 'ImageController@update')->name('image/update/');
+Route::post('image/delete/{id}', 'ImageController@delete')->name('image/delete/');
+
 
 
 Route::get('category', 'CategoryController@index')->name('category');

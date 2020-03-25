@@ -11,11 +11,28 @@
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard');
-});
+// Route::get('/', function () {
+//     return view('dashboard');
+// });
+
+
 
 Auth::routes();
+
+
+
+Route::get('/', 'DashboardController@index');
+Route::get('/login', 'UserController@login')->name('/login');
+Route::post('/loginPost', 'UserController@loginPost')->name('/loginPost');
+Route::get('/register', 'UserController@register')->name('/register');
+Route::post('/registerPost', 'UserController@registerPost')->name('/registerPost');
+Route::get('/logout', 'UserController@logout')->name('/logout');
+
+// Route::get('/', [
+//     'middleware' => 'auth',
+//     'uses' => 'DashboardController@index'
+// ]);
+
 
 Route::get('article', 'ArticleController@index')->name('article');
 

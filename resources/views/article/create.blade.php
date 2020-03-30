@@ -44,17 +44,16 @@
                         <div class="row">
                             <div class="col l12 m12">
                                 <div class="input-field"> 
-                                    <input id="title" name="title" type="text" class="validate" placeholder="Title"> 
+                                    <input id="title" name="title" type="text" class="validate" placeholder="Title" required> 
                                 </div>
                             </div>
                             <div class="col l12 m12">
                                 <div class="input-field"> 
-                                    <select id="category_id" name="category_id" class="browser-default"> 
+                                    <select id="category_id" name="category_id" class="browser-default" required> 
                                         <option value="" disabled selected>Choose Category</option> 
-                                        <option value="1">Anti Gaptek</option> 
-                                        <option value="2">Butuh Hiburan ?</option> 
-                                        <option value="3">Jalan-jalan yuk !</option> 
-                                        <option value="4">Belanja di mana</option> 
+                                        @foreach($category as $item)
+                                        <option value="{{ $item->id }}" >{{ $item->title }}</option> 
+                                        @endforeach 
                                     </select>
                                 </div>
                             </div>
@@ -71,7 +70,7 @@
                         
                             <div class="col l12 m12">
                                 <h5>Description</h5>
-                                <textarea id="ckeditor1" name="description_article"></textarea>
+                                <textarea id="ckeditor1" name="description_article" required></textarea>
                                 <br>
 
                                 <!-- <h4 id="ckeditor2" contenteditable="true">Inline CKEditor</h4>
@@ -82,12 +81,20 @@
                             </div>
 
                             <div class="col l12 m12">
-                                <p class="switch"> 
+                                <!-- <p class="switch"> 
                                     <label> 
                                         <input type="checkbox" id="status" name="status" value="1"/> 
                                         <span class="lever"></span> Publish 
                                     </label> 
-                                </p>
+                                </p> -->
+                                <p> 
+                                    <input class="with-gap" name="status" type="radio" id="status1" value="1"  /> 
+                                    <label for="status1">Publish</label> 
+                                </p> 
+                                <p> 
+                                    <input class="with-gap" name="status" type="radio" id="status2" value="0" /> 
+                                    <label for="status2">Archive</label> 
+                                </p> 
                             </div>
                         </div>
                     </div>

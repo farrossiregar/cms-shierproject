@@ -43,15 +43,15 @@
                         <div class="row">
                             <div class="col l12 m12">
                                 <div class="input-field"> 
-                                    <input id="title" name="title" type="text" class="validate" value="{{ $data->title }}"> 
+                                    <input id="title" name="title" type="text" class="validate" value="{{ $data->title }}" required> 
                                 </div>
                             </div>
                             <div class="col l12 m12">
                                 <div class="input-field"> 
-                                    <select id="category_id" name="category_id" class="browser-default">  {{ $data->category_id }}
+                                    <select id="category_id" name="category_id" class="browser-default" required>
                                         <option value="" disabled selected>Choose Category</option> 
                                         @foreach($category as $item)
-                                        <option value="{{ $item->id }}" <?php if($item->category_id == $data->category_id){ echo "selected"; } ?> >{{ $item->title }}</option> 
+                                        <option value="{{ $item->id }}" <?php if($item->id == $data->category_id){ echo "selected"; } ?> >{{ $item->title }}</option> 
                                         @endforeach
                                         
                                     </select>
@@ -59,7 +59,7 @@
                             </div>
                             <div class="col l12 m12">
                                 <div class="input-field"> 
-                                    <input id="source" name="source" type="text" class="validate" value="{{ $data->source }}"> 
+                                    <input id="source" name="source" type="text" class="validate" value="{{ $data->source }}" > 
                                 </div>
                             </div>
                             <div class="col l12 m12">
@@ -70,7 +70,7 @@
                         
                             <div class="col l12 m12">
                                 <h5>Description</h5>
-                                <textarea id="ckeditor1" name="description_article">
+                                <textarea id="ckeditor1" name="description_article" required>
                                     {{ $data->description }}
                                 </textarea>
                                 <br>
@@ -83,12 +83,21 @@
                             </div>
 
                             <div class="col l12 m12">
-                                <p class="switch"> 
+                                <!-- <p class="switch"> 
                                     <label> 
-                                        <input type="checkbox" id="status" name="status" value="1" <?php if($data->status == '1'){ echo "checked"; } ?>/> 
+                                        <input type="checkbox" id="status" name="status" value="{{ $data->status }}" <?php if($data->status == '1'){ echo "checked"; } ?>/> 
                                         <span class="lever"></span> Publish 
                                     </label> 
-                                </p>
+                                    
+                                </p> -->
+                                <p> 
+                                    <input class="with-gap" name="status" type="radio" id="status1" value="1" <?php if($data->status == '1'){ echo "checked"; } ?> /> 
+                                    <label for="status1">Publish</label> 
+                                </p> 
+                                <p> 
+                                    <input class="with-gap" name="status" type="radio" id="status2" value="0" <?php if($data->status == '0'){ echo "checked"; } ?>/> 
+                                    <label for="status2">Archive</label> 
+                                </p> 
                             </div>
                         </div>
                     </div>

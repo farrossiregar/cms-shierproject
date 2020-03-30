@@ -17,7 +17,9 @@ class ArticleController extends Controller
     }
 
     public function add(){
-        return view('article.create');
+        $params['category'] = Category::all();
+
+        return view('article.create')->with($params);
     }
 
     public function edit($id)

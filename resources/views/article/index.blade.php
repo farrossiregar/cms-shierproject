@@ -48,9 +48,8 @@
                         <th>No</th> 
                         <th>Title</th> 
                         <th style="width: 30%;">Description</th> 
-                        <th>Source</th> 
                         <th>Alias</th> 
-                        <th>Url</th> 
+                        <th>Status</th> 
                         <th>Publish Date</th> 
                         <th>Action</th>
                     </tr> 
@@ -61,9 +60,15 @@
                         <td>{{ $item->id }}</td> 
                         <td>{{ $item->title }}</td> 
                         <td><?php echo substr(html_entity_decode($item->description), 0, 200); ?></td> 
-                        <td>{{ $item->source }}</td> 
                         <td>{{ $item->alias }}</td> 
-                        <td>{{ $item->link }}</td> 
+                        <?php 
+                            if($item->status == '1'){ 
+                                $status = '<div class="btn green" > Publish </div>'; 
+                            }else{
+                                $status = '<div class="btn red" > Archive </div>'; 
+                            } 
+                        ?>
+                        <td><?php echo $status; ?></td>
                         <td>{{ $item->created_at }}</td> 
                         <td>
                             <span><a href="{{ route('article/edit/', strval($item->id)) }}" class="btn yellow"><i class="fa fa-edit"></i></a></span>

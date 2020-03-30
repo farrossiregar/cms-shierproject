@@ -60,7 +60,7 @@
                             if($item->status == '1'){ 
                                 $status = '<div class="btn green" > Publish </div>'; 
                             }else{
-                                $status = '<div class="btn red" > Arrchive </div>'; 
+                                $status = '<div class="btn red" > Archive </div>'; 
                             } 
                         ?>
                         <td><?php echo $status; ?></td>

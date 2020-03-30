@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Article;
+use App\Models\Category;
 
 class ArticleController extends Controller
 {
@@ -22,6 +23,9 @@ class ArticleController extends Controller
     public function edit($id)
     {
         $params['data'] = Article::where('id', $id)->first();
+        $params['category'] = Category::all();
+
+
         return view('article.edit')->with($params);
     }
 
@@ -32,7 +36,7 @@ class ArticleController extends Controller
         $data->source               = $request->source;
         $data->category_id          = $request->category_id;
         $data->link                 = $request->link;
-        $data->alias                = date('ymd').'/'.str_replace(' ', '-', $request->title);
+        $data->alias                = date('ymd').'-'.str_replace(' ', '-', $request->title);
         $data->status               = '1';
         $data->writer_id            = '1';
         $data->publish_date     = date('Y-m-d H:i:s');
@@ -45,16 +49,24 @@ class ArticleController extends Controller
         return redirect()->route('article');
     }
 
-    public function delete($alias){
-        $data = Article::where('alias', $alias)->first();
+    public function delete($id){
+        $data = Article::where('id', $id)->first();
         $data->delete();
 
-        return redirect()->route('article.index');
+        return redirect()->route('article');
     }
 
     public function update(Request $request, $id){
         $data = Article::where('id', $id)->first();
-        $data->title        = $request->get('title');
+
+        $data->title                = $request->get('title');
+        $data->description          = $request->get('description_article');
+        $data->source               = $request->get('source');
+        $data->category_id          = $request->get('category_id');
+        $data->link                 = $request->get('link');
+        $data->alias                = date('ymd').'-'.str_replace(' ', '-', $request->title);
+        $data->status               = $request->get('status');
+        $data->writer_id            = '1';
         $data->save();
 
         return redirect()->route('article');

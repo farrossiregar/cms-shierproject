@@ -50,10 +50,10 @@
                                 <div class="input-field"> 
                                     <select id="category_id" name="category_id" class="browser-default">  {{ $data->category_id }}
                                         <option value="" disabled selected>Choose Category</option> 
-                                        <option value="1" <?php if($data->category_id == '1'){ echo "selected"; } ?> >Anti Gaptek</option> 
-                                        <option value="2" <?php if($data->category_id == '2'){ echo "selected"; } ?> >Butuh Hiburan ?</option> 
-                                        <option value="3" <?php if($data->category_id == '3'){ echo "selected"; } ?> >Jalan-jalan yuk !</option> 
-                                        <option value="4" <?php if($data->category_id == '4'){ echo "selected"; } ?> >Belanja di mana</option> 
+                                        @foreach($category as $item)
+                                        <option value="{{ $item->id }}" <?php if($item->category_id == $data->category_id){ echo "selected"; } ?> >{{ $item->title }}</option> 
+                                        @endforeach
+                                        
                                     </select>
                                 </div>
                             </div>

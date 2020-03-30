@@ -45,7 +45,7 @@
 
             <!-- Logo -->
             <a href="" class="brand-logo">
-                <img src="{{ asset('assets/_con/images/logo.png') }}" alt="Con">
+                <img src="{{ asset('image/shierproject-logo.jpeg') }}" alt="Con">
             </a>
             <!-- /Logo -->
 
@@ -85,7 +85,9 @@
 
                 <!-- Logo -->
                 <a href="" class="brand-logo">
-                    <img src="{{ asset('assets/_con/images/logo-white.png') }}" alt="Con">
+                    <!-- <img src="{{ asset('assets/_con/images/logo-white.png') }}" alt="Con"> -->
+                    <img src="{{ asset('image/shierproject-logo.jpeg') }}" alt="Con">
+        
                 </a>
                 <!-- /Logo -->
             </div>

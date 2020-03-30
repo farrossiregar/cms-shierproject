@@ -40,7 +40,7 @@
             <a href="#" class="card-panel stats-card indigo lighten-2 indigo-text text-lighten-5">
                 <i class="fa fa-comments-o"></i>
                 <span class="count">145</span>
-                <div class="name">Feedbacks</div>
+                <div class="name">Users</div>
             </a>
         </div>
         <div class="col l4 s12">
@@ -52,7 +52,7 @@
                 </div>
 
                 <span class="count">342</span>
-                <div class="name">Posts</div>
+                <div class="name">Total Article</div>
             </a>
         </div>
         <div class="col l4 s12">
@@ -63,7 +63,7 @@
 
                 <i class="fa fa-spinner"></i>
                 <span class="count">42%</span>
-                <div class="name">Server Load</div>
+                <div class="name">Category</div>
             </div>
         </div>
     </div>

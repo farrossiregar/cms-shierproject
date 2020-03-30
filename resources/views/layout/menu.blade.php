@@ -1,18 +1,18 @@
 <ul>
     <li class="yay-user-info">
         <a href="page-profile.html">
-            <img src="{{ asset('assets/_con/images/user.jpg') }}" alt="John Doe" class="circle">
-            <h3 class="yay-user-info-name">John Doe</h3>
+            <img src="{{ asset('assets/_con/images/user.jpg') }}" alt="Farros Shier" class="circle">
+            <h3 class="yay-user-info-name">Farros Shier</h3>
             <div class="yay-user-location">
-                <i class="fa fa-map-marker"></i> Las Vegas, NV
+                <i class="fa fa-map-marker"></i> Indonesia
             </div>
         </a>
     </li>
 
-    <li>
+    <!-- <li>
         <a href="angularjs/" class=" waves-effect waves-blue"> <i class="ion ion-social-angular"></i> Open Angular Version </a>
 
-    </li>
+    </li> -->
 
     <li class="label">Menu</li>
 
@@ -30,14 +30,14 @@
         <a href="{{ route('image') }}" class=" waves-effect waves-blue"> <i class="fa fa-magic"></i> Bank Image </a>
 
     </li>
-    <li>
+    <!-- <li>
         <a href="widgets.html" class=" waves-effect waves-blue"> <i class="fa fa-magic"></i> Visitor </a>
 
-    </li>
+    </li> -->
 
 
     
-    <li>
+    <!-- <li>
         <a href="#" class="yay-sub-toggle waves-effect waves-blue"> <i class="fa fa-indent"></i> Menu Levels
             <span class="yay-collapse-icon mdi-navigation-expand-more"></span>
         </a>
@@ -95,10 +95,10 @@
             </li>
 
         </ul>
-    </li>
+    </li> -->
 
 
-    <li class="label">Stats</li>
+    <!-- <li class="label">Stats</li>
     <li class="content">
         <span><i class="fa fa-spinner"></i> Server Load</span>
         <div class="progress small light-green lighten-4">
@@ -109,5 +109,5 @@
         <div class="progress small">
             <div style="width: 91%"></div>
         </div>
-    </li>
+    </li> -->
 </ul>

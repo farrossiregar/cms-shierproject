@@ -47,7 +47,7 @@
     </li>
     <li class="user">
         <a class="dropdown-button" data-activates="user-dropdown" href="#!">
-            <img src="{{ asset('assets/_con/images/user.jpg') }}" alt="John Doe" class="circle"> John Doe <i class="mdi-navigation-expand-more right"></i>
+            <img src="{{ asset('assets/_con/images/user.jpg') }}" alt="Farros Shier" class="circle"> Farros Shier <i class="mdi-navigation-expand-more right"></i>
         </a>
 
         <ul id="user-dropdown" class="dropdown-content">

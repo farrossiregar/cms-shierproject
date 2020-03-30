@@ -19,9 +19,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="_nK">
-    <link rel="icon" href="assets/_con/images/icon.png">
+    <!-- <link rel="icon" href="assets/_con/images/icon.png"> -->
+    <link rel="icon" href="{{ asset('image/shierproject-logo.jpeg') }}">
 
-    <title>Con - Admin Dashboard with Material Design</title>
+    <title>Login to CMS Shierproject.com</title>
 
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
 
@@ -72,10 +73,12 @@
             {{ csrf_field() }}
             <div class="row links">
                 <div class="col s6 logo">
-                    <img src="assets/_con/images/logo-white.png" alt="">
+                    <!-- <img src="assets/_con/images/logo-white.png" alt=""> -->
+                    <img src="{{ asset('image/shierproject-logo.jpeg') }}" alt="">
                 </div>
-                <div class="col s6 right-align">
-                    <strong>Sign In</strong> / <a href="page-sign-up.html">Sign Up</a></div>
+                <div class="col s6 right-align"><a href="{{ route('login') }}">Sign In</a> /
+                    <strong><a href="{{ route('/register') }}">Sign Up</a></strong>
+                </div>
             </div>
 
             <div class="card-panel clearfix">
@@ -114,20 +117,20 @@
                 </div>
                 <!-- /Password -->
 
-                <div class="switch">
+                <!-- <div class="switch">
                     <label>
                         <input type="checkbox" checked />
                         <span class="lever"></span>
                         Remember
                     </label>
-                </div>
+                </div> -->
 
                 <button class="waves-effect waves-light btn-large z-depth-0 z-depth-1-hover">Sign In</button>
             </div>
 
-            <div class="links right-align">
+            <!-- <div class="links right-align">
                 <a href="page-forgot-password.html">Forgot Password?</a>
-            </div>
+            </div> -->
 
         </form>
         <!-- /Sign In Form -->

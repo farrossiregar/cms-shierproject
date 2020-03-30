@@ -19,9 +19,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="_nK">
-    <link rel="icon" href="assets/_con/images/icon.png">
+    <!-- <link rel="icon" href="assets/_con/images/icon.png"> -->
+    <link rel="icon" href="{{ asset('image/shierproject-logo.jpeg') }}">
 
-    <title>Con - Admin Dashboard with Material Design</title>
+    <title>Register to CMS Shierproject.com</title>
 
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
 
@@ -72,10 +73,11 @@
             {{csrf_field()}}
             <div class="row links">
                 <div class="col s6 logo">
-                    <img src="assets/_con/images/logo-white.png" alt="">
+                    <!-- <img src="assets/_con/images/logo-white.png" alt=""> -->
+                    <img src="{{ asset('image/shierproject-logo.jpeg') }}" alt="">
                 </div>
-                <div class="col s6 right-align"><a href="page-sign-in.html">Sign In</a> /
-                    <strong>Sign Up</strong>
+                <div class="col s6 right-align"><a href="{{ route('login') }}">Sign In</a> /
+                    <strong><a href="{{ route('/register') }}">Sign Up</a></strong>
                 </div>
             </div>
 
@@ -141,10 +143,10 @@
                 </div>
                 <!-- /Password -->
 
-                <p>
+                <!-- <p>
                     <input type="checkbox" id="checkbox_terms" />
                     <label for="checkbox_terms">I agree to the <a href="#">terms of use</a>.</label>
-                </p>
+                </p> -->
 
                 <button class="waves-effect waves-light btn-large z-depth-0 z-depth-1-hover">Sign Up</button>
             </div>

@@ -11,32 +11,17 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('dashboard');
-// });
-
-
-
 Auth::routes();
 
-
-
 Route::get('/', 'DashboardController@index');
-Route::get('/login', 'UserController@login')->name('/login');
+Route::get('login', 'UserController@login')->name('login');
 Route::post('/loginPost', 'UserController@loginPost')->name('/loginPost');
 Route::get('/register', 'UserController@register')->name('/register');
 Route::post('/registerPost', 'UserController@registerPost')->name('/registerPost');
 Route::get('/logout', 'UserController@logout')->name('/logout');
 
-// Route::get('/', [
-//     'middleware' => 'auth',
-//     'uses' => 'DashboardController@index'
-// ]);
-
 
 Route::get('article', 'ArticleController@index')->name('article');
-
-//Route::get('index-article', 'ArticleController@index')->name('index-article');
 Route::get('article/add', 'ArticleController@add')->name('article/add');
 Route::post('store-article', 'ArticleController@store')->name('store_article');
 Route::get('article/edit/{id}', 'ArticleController@edit')->name('article/edit/');

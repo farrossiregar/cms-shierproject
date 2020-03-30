@@ -34,7 +34,7 @@ class UserController extends Controller
                 Session::put('name',$data->name);
                 Session::put('email',$data->email);
                 Session::put('login',TRUE);
-                return view('dashboard');
+                return redirect('/');
             }
             else{
                 return redirect('login')->with('alert','Password atau Email, Salah !');

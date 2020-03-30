@@ -3,7 +3,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="_nK">
-    <link rel="icon" href="{{ asset('assets/_con/images/icon.png') }}">
+    <!-- <link rel="icon" href="{{ asset('assets/_con/images/icon.png') }}"> -->
+    <link rel="icon" href="{{ asset('image/shierproject-logo.jpeg') }}">
+
 
     <title>@yield('title')</title>
 

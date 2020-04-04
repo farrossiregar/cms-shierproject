@@ -36,52 +36,61 @@
 
     <!-- Stats Panels -->
     <div class="row">
-        <div class="card-panel">
+        <div class="card-panel ">
             <div class="row">
                 <div class="col l12 m12">
                     <a href="{{ route('article/add') }}" class="waves-effect waves-dark btn blue"><i></i> Tambah</a>
                 </div>
             </div>
-            <table id="table_data_article" class="display table table-striped table-hover"> 
-                <thead> 
-                    <tr> 
-                        <th>No</th> 
-                        <th>Title</th> 
-                        <th style="width: 30%;">Description</th> 
-                        <th>Alias</th> 
-                        <th>Status</th> 
-                        <th>Publish Date</th> 
-                        <th>Action</th>
-                    </tr> 
-                </thead> 
-                <tbody> 
-                    @foreach($data as $item)
-                    <tr> 
-                        <td>{{ $item->id }}</td> 
-                        <td>{{ $item->title }}</td> 
-                        <td><?php echo substr(html_entity_decode($item->description), 0, 200); ?></td> 
-                        <td>{{ $item->alias }}</td> 
-                        <?php 
-                            if($item->status == '1'){ 
-                                $status = '<div class="btn green" > Publish </div>'; 
-                            }else{
-                                $status = '<div class="btn red" > Archive </div>'; 
-                            } 
+            <div class="table-responsive">
+                <table id="table_data_article" class="display table table-striped table-hover"> 
+                    <thead> 
+                        <tr> 
+                            <th>No</th> 
+                            <th>Title</th> 
+                            <th style="width: 30%;">Description</th> 
+                            <th>Alias</th> 
+                            <th>Status</th> 
+                            <th>Publish Date</th> 
+                            <th>Action</th>
+                        </tr> 
+                    </thead> 
+                    <tbody> 
+                        <?php
+                            $no = 0;
                         ?>
-                        <td><?php echo $status; ?></td>
-                        <td>{{ $item->created_at }}</td> 
-                        <td>
-                            <span><a href="{{ route('article/edit/', strval($item->id)) }}" class="btn yellow"><i class="fa fa-edit"></i></a></span>
-                            <form action="{{ route('article/delete/', $item->id) }}" method="post">
-                            {{ csrf_field() }}
-                            <span><button type="submit" class="btn red"><i class="mdi-action-delete"></i></button></span>
+                        @foreach($data as $item)
+                        <?php
+                            $no = $no + 1;
+                        ?>
+                        <tr> 
+                            <td><?php echo $no; ?></td> 
+                            <td>{{ $item->title }}</td> 
+                            <td><?php echo substr(html_entity_decode($item->description), 0, 200); ?></td> 
+                            <td>{{ $item->alias }}</td> 
+                            <?php 
+                                if($item->status == '1'){ 
+                                    $status = '<div class="btn green" > Publish </div>'; 
+                                }else{
+                                    $status = '<div class="btn red" > Archive </div>'; 
+                                } 
+                            ?>
+                            <td><?php echo $status; ?></td>
+                            <td>{{ $item->created_at }}</td> 
+                            <td>
+                                <span><a href="{{ route('article/edit/', strval($item->id)) }}" class="btn yellow"><i class="fa fa-edit"></i></a></span>
+                                <form action="{{ route('article/delete/', $item->id) }}" method="post">
+                                {{ csrf_field() }}
+                                <span><button type="submit" class="btn red"><i class="mdi-action-delete"></i></button></span>
 
-                            </form>
-                        </td>
-                    </tr> 
-                    @endforeach
-                </tbody> 
-            </table> 
+                                </form>
+                            </td>
+                        </tr> 
+                        @endforeach
+                    </tbody> 
+                </table>
+            </div>
+             
 
             
             <!-- Data Tables -->

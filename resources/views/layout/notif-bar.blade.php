@@ -46,8 +46,8 @@
         </div>
     </li>
     <li class="user">
-        <a class="dropdown-button" data-activates="user-dropdown" href="#!">
-            <img src="{{ asset('assets/_con/images/user.jpg') }}" alt="Farros Shier" class="circle"> Farros Shier <i class="mdi-navigation-expand-more right"></i>
+        <a class="dropdown-button" data-activates="user-dropdown" href="">
+            <img src="{{ asset('assets/_con/images/user.jpg') }}" alt="<?php echo Illuminate\Support\Facades\Session::get('name'); ?>" class="circle"> <?php echo Illuminate\Support\Facades\Session::get('name'); ?><i class="mdi-navigation-expand-more right"></i>
         </a>
 
         <ul id="user-dropdown" class="dropdown-content">

@@ -1,36 +1,36 @@
 <!-- jQuery -->
-<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="{{ asset('bower_components/jquery/dist/jquery.min.js') }}"></script>
 
 <!-- jQuery RAF (improved animation performance) -->
-<script type="text/javascript" src="bower_components/jquery-requestAnimationFrame/dist/jquery.requestAnimationFrame.min.js"></script>
+<script type="text/javascript" src="{{ asset('bower_components/jquery-requestAnimationFrame/dist/jquery.requestAnimationFrame.min.js') }}"></script>
 
 <!-- nanoScroller -->
-<script type="text/javascript" src="bower_components/nanoscroller/bin/javascripts/jquery.nanoscroller.min.js"></script>
+<script type="text/javascript" src="{{ asset('bower_components/nanoscroller/bin/javascripts/jquery.nanoscroller.min.js') }}"></script>
 
 <!-- Materialize -->
-<script type="text/javascript" src="bower_components/materialize/bin/materialize.js"></script>
+<script type="text/javascript" src="{{ asset('bower_components/materialize/bin/materialize.js') }}"></script>
 
 <!-- Simple Weather -->
-<script type="text/javascript" src="bower_components/simpleWeather/jquery.simpleWeather.min.js"></script>
+<script type="text/javascript" src="{{ asset('bower_components/simpleWeather/jquery.simpleWeather.min.js') }}"></script>
 
 <!-- Sparkline -->
-<script type="text/javascript" src="bower_components/jquery.sparkline/dist/jquery.sparkline.min.js"></script>
+<script type="text/javascript" src="{{ asset('bower_components/jquery.sparkline/dist/jquery.sparkline.min.js') }}"></script>
 
 <!-- Flot -->
-<script type="text/javascript" src="bower_components/flot/jquery.flot.js"></script>
-<script type="text/javascript" src="bower_components/flot/jquery.flot.time.js"></script>
-<script type="text/javascript" src="bower_components/flot/jquery.flot.pie.js"></script>
-<script type="text/javascript" src="bower_components/flot/jquery.flot.categories.js"></script>
-<script type="text/javascript" src="bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+<script type="text/javascript" src="{{ asset('bower_components/flot/jquery.flot.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bower_components/flot/jquery.flot.time.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bower_components/flot/jquery.flot.pie.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bower_components/flot/jquery.flot.categories.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js') }}"></script>
 
 <!-- d3 -->
-<script type="text/javascript" src="bower_components/d3/d3.min.js"></script>
+<script type="text/javascript" src="{{ asset('bower_components/d3/d3.min.js') }}"></script>
 
 <!-- nvd3 -->
-<script type="text/javascript" src="bower_components/nvd3/build/nv.d3.min.js"></script>
+<script type="text/javascript" src="{{ asset('bower_components/nvd3/build/nv.d3.min.js') }}"></script>
 
 <!-- Rickshaw -->
-<script type="text/javascript" src="bower_components/rickshaw/rickshaw.min.js"></script>
+<script type="text/javascript" src="{{ asset('bower_components/rickshaw/rickshaw.min.js') }}"></script>
 
 
 
@@ -42,9 +42,9 @@
 
 
 <!-- jvectormap -->
-<script type="text/javascript" src="assets/jquery-jvectormap/jquery-jvectormap.min.js"></script>
-<script type="text/javascript" src="assets/jquery-jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-<script type="text/javascript" src="assets/jquery-jvectormap/gdp-data.js"></script>
+<script type="text/javascript" src="{{ asset('assets/jquery-jvectormap/jquery-jvectormap.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/jquery-jvectormap/jquery-jvectormap-world-mill-en.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/jquery-jvectormap/gdp-data.js') }}"></script>
 
 
 
@@ -56,13 +56,13 @@
 
 
 <!-- Sortable -->
-<script type="text/javascript" src="bower_components/Sortable/Sortable.min.js"></script>
+<script type="text/javascript" src="{{ asset('bower_components/Sortable/Sortable.min.js') }}"></script>
 
 <!-- Main -->
-<script type="text/javascript" src="assets/_con/js/_con.js"></script>
+<script type="text/javascript" src="{{ asset('assets/_con/js/_con.js') }}"></script>
 
 <!-- Google Prettify -->
-<script type="text/javascript" src="bower_components/code-prettify/src/prettify.js"></script>
+<script type="text/javascript" src="{{ asset('bower_components/code-prettify/src/prettify.js') }}"></script>
 
 
 <script>
@@ -539,9 +539,9 @@ setTimeout(function() {
 </script>
 
 
-<script src="bower_components/ckeditor/ckeditor.js" type="text/javascript"></script>
+<script src="{{ asset('bower_components/ckeditor/ckeditor.js') }}" type="text/javascript"></script>
 
 <!-- Data Tables -->
-<script type="text/javascript" src="bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="bower_components/datatables-tabletools/js/dataTables.tableTools.js"></script>
-<script type="text/javascript" src="bower_components/datatables-scroller/js/dataTables.scroller.js"></script>
+<script type="text/javascript" src="{{ asset('bower_components/datatables/media/js/jquery.dataTables.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bower_components/datatables-tabletools/js/dataTables.tableTools.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bower_components/datatables-scroller/js/dataTables.scroller.js') }}"></script>

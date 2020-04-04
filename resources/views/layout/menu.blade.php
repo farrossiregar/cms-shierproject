@@ -1,8 +1,8 @@
 <ul>
     <li class="yay-user-info">
         <a href="page-profile.html">
-            <img src="{{ asset('assets/_con/images/user.jpg') }}" alt="Farros Shier" class="circle">
-            <h3 class="yay-user-info-name">Farros Shier</h3>
+            <img src="{{ asset('assets/_con/images/user.jpg') }}" alt="<?php echo Illuminate\Support\Facades\Session::get('name'); ?>" class="circle">
+            <h3 class="yay-user-info-name"><?php echo Illuminate\Support\Facades\Session::get('name'); ?></h3>
             <div class="yay-user-location">
                 <i class="fa fa-map-marker"></i> Indonesia
             </div>
@@ -17,17 +17,17 @@
     <li class="label">Menu</li>
 
     <li>
-        <a href="{{ route('article') }}" class=" waves-effect waves-blue"> <i class="fa fa-magic"></i> Article </a>
+        <a href="{{ route('article') }}" class=" waves-effect waves-blue"> <i class="fa fa-newspaper-o"></i> Article </a>
 
     </li>
 
     <li>
-        <a href="{{ route('category') }}" class=" waves-effect waves-blue"> <i class="fa fa-magic"></i> Categories </a>
+        <a href="{{ route('category') }}" class=" waves-effect waves-blue"> <i class="fa fa-group"></i> Categories </a>
 
     </li>
 
     <li>
-        <a href="{{ route('image') }}" class=" waves-effect waves-blue"> <i class="fa fa-magic"></i> Bank Image </a>
+        <a href="{{ route('image') }}" class=" waves-effect waves-blue"> <i class="fa fa-photo"></i> Bank Image </a>
 
     </li>
     <!-- <li>

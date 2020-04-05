@@ -42,8 +42,8 @@
                     <a href="{{ route('article/add') }}" class="waves-effect waves-dark btn blue"><i></i> Tambah</a>
                 </div>
             </div>
-            <div class="table-responsive">
-                <table id="table_data_article" class="display table table-striped table-hover"> 
+            <div style="width: 100%; overflow: scroll;">
+                <table id="table_data_article" class="display table table-striped table-hover table-responsive"> 
                     <thead> 
                         <tr> 
                             <th>No</th> 

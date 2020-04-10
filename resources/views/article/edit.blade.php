@@ -103,6 +103,15 @@
                     </div>
                     <div class="col l6 m12">
                         <div class="row">
+                            <?php
+                                if($image != ''){
+                                    $image_name = $image->name;
+                                    $image_caption = $image->caption;
+                                }else{
+                                    $image_name = '';
+                                    $image_caption = '';
+                                }
+                            ?>
                             <div class="file-field input-field"> 
                                 <div class="btn"> 
                                     <span>File</span> 
@@ -111,11 +120,11 @@
                                 </div> 
                                 
                                 <div class="file-path-wrapper"> 
-                                    <input class="file-path validate" type="text" id="image_name" name="image_name" value="{{ $image->image_name }}" required>                                   
+                                    <input class="file-path validate" type="text" id="image_name" name="image_name" value="<?php echo $image_name; ?>" required>                                   
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6"  style="width: 100%;">
-                                        <img src="{{ asset('image/content').'/'.$image->image_name }}" alt="" style="width: 100%;">
+                                        <img src="{{ asset('image/content').'/'.$image_name }}" alt="" style="width: 100%;">
                                     </div>
                                 </div>
                             </div>
@@ -123,7 +132,7 @@
 
                             <div class="col l12 m12">
                                 <div class="input-field"> 
-                                    <input id="image_caption" type="text" class="validate" id="image_caption" name="image_caption" value="{{ $image->image_caption }}" placeholder="Image Caption"> 
+                                    <input id="image_caption" type="text" class="validate" id="image_caption" name="image_caption" value="<?php echo $image_caption; ?>" placeholder="Image Caption"> 
                                 </div>
                             </div>
                         </div>

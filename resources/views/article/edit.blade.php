@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Add Article')
+@section('title', 'Edit Article')
 
 @section('content')
 
@@ -17,11 +17,11 @@
                     </li>
 
                     <li>
-                        <a href="#">Category</a> /
+                        <a href="#">Article</a> /
                     </li>
 
                     <li>
-                        <a href='dashboard.html'>Dashboard</a>
+                        <a href='dashboard.html'>Edit</a>
                     </li>
                 </ul>
             </div>
@@ -36,7 +36,7 @@
     <!-- Stats Panels -->
     <div class="row">
         <div class="card-panel">
-            <form action="{{ route('article/update/', $data->id) }}" method="post">
+            <form action="{{ route('article/update/', $data->id) }}" method="post" enctype="multipart/form-data">
                 <div class="row">
                     {{ csrf_field() }}
                     <div class="col l6 m12">
@@ -106,15 +106,24 @@
                             <div class="file-field input-field"> 
                                 <div class="btn"> 
                                     <span>File</span> 
-                                    <input type="file" id="image_thumbnail" name="image_thumbnail"> 
+                                    <input type="file" id="file" name="file" required> 
+                                    
                                 </div> 
+                                
                                 <div class="file-path-wrapper"> 
-                                    <input class="file-path validate" type="text" id="image_thumbnail" name="image_thumbnail"> 
+                                    <input class="file-path validate" type="text" id="image_name" name="image_name" value="{{ $image->image_name }}" required>                                   
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6"  style="width: 100%;">
+                                        <img src="{{ asset('image/content').'/'.$image->image_name }}" alt="" style="width: 100%;">
+                                    </div>
                                 </div>
                             </div>
+                            <br>
+
                             <div class="col l12 m12">
                                 <div class="input-field"> 
-                                    <input id="image_caption" type="text" class="validate" id="image_caption" name="image_caption" placeholder="Image Caption"> 
+                                    <input id="image_caption" type="text" class="validate" id="image_caption" name="image_caption" value="{{ $image->image_caption }}" placeholder="Image Caption"> 
                                 </div>
                             </div>
                         </div>

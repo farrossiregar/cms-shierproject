@@ -18,11 +18,11 @@
                     </li>
 
                     <li>
-                        <a href="#">Category</a> /
+                        <a href="#">Article</a> /
                     </li>
 
                     <li>
-                        <a href='dashboard.html'>Dashboard</a>
+                        <a href='dashboard.html'>Create</a>
                     </li>
                 </ul>
             </div>
@@ -37,7 +37,7 @@
     <!-- Stats Panels -->
     <div class="row">
         <div class="card-panel">
-            <form action="{{ route('store_article') }}" method="post">
+            <form action="{{ route('store_article') }}" method="post" enctype="multipart/form-data">
                 <div class="row">
                     {{ csrf_field() }}
                     <div class="col l6 m12">
@@ -103,12 +103,15 @@
                             <div class="file-field input-field"> 
                                 <div class="btn"> 
                                     <span>File</span> 
-                                    <input type="file" id="image_thumbnail" name="image_thumbnail"> 
+                                    <input type="file" id="file" name="file" required> 
                                 </div> 
                                 <div class="file-path-wrapper"> 
-                                    <input class="file-path validate" type="text" id="image_thumbnail" name="image_thumbnail"> 
+                                    <input class="file-path validate" type="text" id="image_name" name="image_name" required>                                   
                                 </div>
+                                    
+                                </div> 
                             </div>
+
                             <div class="col l12 m12">
                                 <div class="input-field"> 
                                     <input id="image_caption" type="text" class="validate" id="image_caption" name="image_caption" placeholder="Image Caption"> 
@@ -116,7 +119,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <div class="row">
                     <div class="col l12 m12">

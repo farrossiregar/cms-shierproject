@@ -124,7 +124,12 @@ class ArticleController extends Controller
 
         if ($request->file('file')){
             $image = Image::where('id_article', $id)->first();
-            $image->image_caption       = $request->get('image_caption');
+            if(!$image){
+                $image = new Image();
+            }
+            
+            $image->id_article          = $data->id;
+            $image->image_caption       = $request->image_caption;
 
             $file = $request->file('file');
             $fileName = $data->alias. "." . $file->getClientOriginalExtension();
@@ -133,6 +138,7 @@ class ArticleController extends Controller
             $file->move($destinationPath, $fileName);
 
             //\Image::make(public_path(''. $fileName))->fit(100, 70)->save(public_path(''. $fileName));
+
             $image->image_name          = $fileName;
             $image->image_source        = $fileName;
             

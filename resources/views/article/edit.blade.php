@@ -105,8 +105,8 @@
                         <div class="row">
                             <?php
                                 if($image != ''){
-                                    $image_name = $image->name;
-                                    $image_caption = $image->caption;
+                                    $image_name = $image->image_name;
+                                    $image_caption = $image->image_caption;
                                 }else{
                                     $image_name = '';
                                     $image_caption = '';
@@ -115,7 +115,7 @@
                             <div class="file-field input-field"> 
                                 <div class="btn"> 
                                     <span>File</span> 
-                                    <input type="file" id="file" name="file" required> 
+                                    <input type="file" id="file" name="file" value="<?php echo $image_name; ?>" required> 
                                     
                                 </div> 
                                 

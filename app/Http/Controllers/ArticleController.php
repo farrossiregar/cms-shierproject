@@ -81,7 +81,7 @@ class ArticleController extends Controller
                 //\Image::make(public_path(''. $fileName))->fit(100, 70)->save(public_path(''. $fileName));
 
                 $image->image_name          = $fileName;
-                $image->image_source        = $fileName;
+                $image->image_source        = $request->image_source;
                 
                 $image->save();
                 
@@ -140,7 +140,7 @@ class ArticleController extends Controller
             //\Image::make(public_path(''. $fileName))->fit(100, 70)->save(public_path(''. $fileName));
 
             $image->image_name          = $fileName;
-            $image->image_source        = $fileName;
+            $image->image_source        = $request->image_source;
             
             $image->save();
             

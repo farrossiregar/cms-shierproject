@@ -114,7 +114,10 @@
 
                             <div class="col l12 m12">
                                 <div class="input-field"> 
-                                    <input id="image_caption" type="text" class="validate" id="image_caption" name="image_caption" placeholder="Image Caption"> 
+                                    <input id="image_source" type="text" class="validate" name="image_source" placeholder="Image Source"> 
+                                </div>
+                                <div class="input-field"> 
+                                    <input id="image_caption" type="text" class="validate" name="image_caption" placeholder="Image Caption"> 
                                 </div>
                             </div>
                         </div>

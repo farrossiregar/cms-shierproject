@@ -107,9 +107,11 @@
                                 if($image != ''){
                                     $image_name = $image->image_name;
                                     $image_caption = $image->image_caption;
+                                    $image_source = $image->image_source;
                                 }else{
                                     $image_name = '';
                                     $image_caption = '';
+                                    $image_source = '';
                                 }
                             ?>
                             <div class="file-field input-field"> 
@@ -132,7 +134,10 @@
 
                             <div class="col l12 m12">
                                 <div class="input-field"> 
-                                    <input id="image_caption" type="text" class="validate" id="image_caption" name="image_caption" value="<?php echo $image_caption; ?>" placeholder="Image Caption"> 
+                                    <input id="image_source" type="text" class="validate" name="image_source" value="<?php echo $image_source; ?>"> 
+                                </div>
+                                <div class="input-field"> 
+                                    <input id="image_caption" type="text" class="validate" ame="image_caption" value="<?php echo $image_caption; ?>" > 
                                 </div>
                             </div>
                         </div>

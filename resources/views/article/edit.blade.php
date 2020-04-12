@@ -117,7 +117,7 @@
                             <div class="file-field input-field"> 
                                 <div class="btn"> 
                                     <span>File</span> 
-                                    <input type="file" id="file" name="file" value="<?php echo $image_name; ?>" required> 
+                                    <input type="file" id="file" name="file" value="<?php echo $image_name; ?>"> 
                                     
                                 </div> 
                                 

@@ -137,7 +137,7 @@
                                     <input id="image_source" type="text" class="validate" name="image_source" value="<?php echo $image_source; ?>"> 
                                 </div>
                                 <div class="input-field"> 
-                                    <input id="image_caption" type="text" class="validate" ame="image_caption" value="<?php echo $image_caption; ?>" > 
+                                    <input id="image_caption" type="text" class="validate" name="image_caption" value="<?php echo $image_caption; ?>" > 
                                 </div>
                             </div>
                         </div>

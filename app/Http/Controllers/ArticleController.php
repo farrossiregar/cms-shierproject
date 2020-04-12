@@ -129,7 +129,7 @@ class ArticleController extends Controller
             }
             
             $image->id_article          = $data->id;
-            $image->image_caption       = $request->image_caption;
+            $image->image_caption       = $request->get('image_caption');
 
             $file = $request->file('file');
             $fileName = $data->alias. "." . $file->getClientOriginalExtension();
@@ -140,7 +140,7 @@ class ArticleController extends Controller
             //\Image::make(public_path(''. $fileName))->fit(100, 70)->save(public_path(''. $fileName));
 
             $image->image_name          = $fileName;
-            $image->image_source        = $request->image_source;
+            $image->image_source        = $request->get('image_source');
             
             $image->save();
             

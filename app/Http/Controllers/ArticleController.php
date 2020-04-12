@@ -54,7 +54,7 @@ class ArticleController extends Controller
             $data->category_id          = $request->category_id;
             $title_category             = Category::where('id', $request->category_id)->first();
             $data->link                 = $request->link;
-            $data->alias                = str_replace(' ', '-', strtolower($title_category->title.'_'.date('ymd').'_'.$request->title));
+            $data->alias                = str_replace(' ', '-', strtolower(date('ymd').'_'.$request->title));
             $data->status               = $request->status;
             $data->writer_id            = '1';
             if($request->status == '1'){
@@ -114,7 +114,7 @@ class ArticleController extends Controller
         $data->category_id          = $request->get('category_id');
         $data->link                 = $request->get('link');
         $title_category             = Category::where('id', $request->get('category_id'))->first();
-        $data->alias                = str_replace(' ', '-', strtolower($title_category->title.'_'.date('ymd').'_'.$request->title));
+        $data->alias                = str_replace(' ', '-', strtolower(date('ymd').'_'.$request->title));
         $data->status               = $request->get('status');
         $data->writer_id            = '1';
         if($request->status == '1'){

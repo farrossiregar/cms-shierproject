@@ -140,6 +140,33 @@
                                     <input id="image_caption" type="text" class="validate" name="image_caption" value="<?php echo $image_caption; ?>" > 
                                 </div>
                             </div>
+
+                            <div class="col l12 m12">
+                                <h5>Element</h5>
+                                <hr>
+                                <label for="">Youtube</label>
+                                <div class="input-field">
+                                    <textarea name="" id="" cols="30" rows="10">
+                                        <div class="yt-container">
+                                            <iframe src="https://www.youtube.com/embed/hA6hldpSTF8" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                    </textarea>
+                                </div>
+
+                                <label for="">Movie Desc</label>
+                                <div class="input-field">
+                                    <textarea name="" id="" cols="30" rows="50">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">Pemeran : Robert Downey Jr, Chris Evans, Chris Hemsworth, Mark Rufallo, Scarlett Johansson, Jeremy Renner</li>
+                                            <li class="list-group-item">Sutradara : Anthony dan Joe Russo</li>
+                                            <li class="list-group-item">Durasi : 3 Jam 2 Menit</li>
+                                            <li class="list-group-item">Rating : IMDb : 8.4/10, Rotten Tomatoes : 94%</li>
+                                            <li class="list-group-item">Studio : Walt Disney</li>
+                                            <li class="list-group-item">Pendapatan : $ 2.7 Miliar</li>
+                                        </ul>
+                                    </textarea>
+                                </div>
+                            </div>
                         </div>
                     </div>
 

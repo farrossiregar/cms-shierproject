@@ -45,6 +45,11 @@ Route::get('category/edit/{id}', 'CategoryController@edit')->name('category/edit
 Route::post('category/edit/{id}', 'CategoryController@update')->name('category/update/');
 
 
+Route::get('newsletter', 'NewsletterController@index')->name('newsletter');
+Route::get('newsletter/publish', 'NewsletterController@publish')->name('newsletter/publish');
+
+
+
 Route::get('api-index-article', 'ApiController@index')->name('api-index-article');
 Route::get('api-menu', 'ApiController@menu')->name('api-menu');
 	

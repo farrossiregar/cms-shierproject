@@ -15,7 +15,7 @@ class ArticleController extends Controller
     public function index()
     {
         if(Session::get('login')){
-            $params['data'] = Article::orderBy('id', 'DESC')->get();
+            $params['data'] = Article::orderBy('id', 'DESC')->paginate(10);
             return view('article.index')->with($params);
         }else{
             return redirect('login');

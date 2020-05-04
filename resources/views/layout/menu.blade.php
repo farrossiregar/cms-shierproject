@@ -30,6 +30,11 @@
         <a href="{{ route('image') }}" class=" waves-effect waves-blue"> <i class="fa fa-photo"></i> Bank Image </a>
 
     </li>
+
+    <li>
+        <a href="{{ route('newsletter') }}" class=" waves-effect waves-blue"> <i class="fa fa-photo"></i> Newsletter </a>
+
+    </li>
     <!-- <li>
         <a href="widgets.html" class=" waves-effect waves-blue"> <i class="fa fa-magic"></i> Visitor </a>
 

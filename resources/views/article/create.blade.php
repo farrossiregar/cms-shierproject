@@ -119,7 +119,47 @@
                                 <div class="input-field"> 
                                     <input id="image_caption" type="text" class="validate" name="image_caption" placeholder="Image Caption"> 
                                 </div>
+                                
                             </div>
+                            <!-- <div class="col l12 m12">
+                                <h5>Element</h5>
+                                <hr>
+                                <label for="">Youtube</label>
+                                <div class="input-field">
+                                    <textarea name="" id="youtube_player" cols="30" rows="10">
+                                        <div class="yt-container">
+                                            <iframe src="https://www.youtube.com/embed/hA6hldpSTF8" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                    </textarea>
+                                </div>
+
+                                <label for="">Movie Desc</label>
+                                <div class="input-field">
+                                    <textarea name="" id="movie_desc" cols="30" rows="50">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">Pemeran : Robert Downey Jr, Chris Evans, Chris Hemsworth, Mark Rufallo, Scarlett Johansson, Jeremy Renner</li>
+                                            <li class="list-group-item">Sutradara : Anthony dan Joe Russo</li>
+                                            <li class="list-group-item">Durasi : 3 Jam 2 Menit</li>
+                                            <li class="list-group-item">Rating : IMDb : 8.4/10, Rotten Tomatoes : 94%</li>
+                                            <li class="list-group-item">Studio : Walt Disney</li>
+                                            <li class="list-group-item">Pendapatan : $ 2.7 Miliar</li>
+                                        </ul>
+                                    </textarea>
+                                    <br>
+
+                                </div>
+                            </div>
+                            <br><br>
+
+                            <div class="col l12 m12">
+                                <h4>Tags</h4>
+                                <div class="field_wrapper">
+                                    <div>
+                                        <input type="text" name="field_name[]" value=""/>
+                                        <a href="javascript:void(0);" class="" title="Add field"><i class="fa fa-plus add_button"></i></a>
+                                    </div>
+                                </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -136,6 +176,34 @@
     
     <!-- CKEditor -->
     <script src="{{ asset('bower_components/ckeditor/ckeditor.js') }}" type="text/javascript"></script>
+    
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var maxField = 10; //Input fields increment limitation
+            var addButton = $('.add_button'); //Add button selector
+            var wrapper = $('.field_wrapper'); //Input field wrapper
+            var fieldHTML = '<div><input type="text" name="field_name[]" value=""/><a href="javascript:void(0);" class="remove_button"><i class="fa fa-close "></a></div>'; //New input field html 
+            var x = 1; //Initial field counter is 1
+            
+            //Once add button is clicked
+            $(addButton).click(function(){
+                
+                //Check maximum number of input fields
+                if(x < maxField){ 
+                    x++; //Increment field counter
+                    $(wrapper).append(fieldHTML); //Add field html
+                }
+            });
+            
+            //Once remove button is clicked
+            $(wrapper).on('click', '.remove_button', function(e){
+                e.preventDefault();
+                $(this).parent('div').remove(); //Remove field html
+                x--; //Decrement field counter
+            });
+        });
+    </script>
 
     <!-- CKEditor -->
     <script>

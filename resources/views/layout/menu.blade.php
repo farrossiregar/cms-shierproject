@@ -32,6 +32,11 @@
     </li>
 
     <li>
+        <a href="{{ route('tags') }}" class=" waves-effect waves-blue"> <i class="fa fa-photo"></i> Tags </a>
+
+    </li>
+
+    <li>
         <a href="{{ route('newsletter') }}" class=" waves-effect waves-blue"> <i class="fa fa-photo"></i> Newsletter </a>
 
     </li>

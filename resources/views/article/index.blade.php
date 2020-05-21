@@ -89,27 +89,7 @@
                         @endforeach
                     </tbody> 
                 </table>
-                <div class="col-md-6 pull-left text-left">Showing {{ $data->firstItem() }} to {{ $data->lastItem() }} of {{ $data->total() }} entries</div>
-                <div class="col-md-6 pull-left text-left">{{ $data->appends($_GET)->render() }}</div><div class="clearfix"></div>
-                <ul class="pagination">
-                    <li><a href="{{ route('article', 'page=1') }}">First</a></li>
-                    <?php
-                        for($i = 1; $i <= $data->total(); $i++){
-                            $current = 'page='.$i;
-                            $active = 'class="active"';
-                            if($data->currentPage() == $i){
-                                $btnpage = '<li '.$active.'><a href="'.route("article", $current).'">'.$i.'</a></li>';
-                            }else{
-                                $btnpage = '<li ><a href="'.route("article", $current).'">'.$i.'</a></li>';
-                            }
-                            
-                            echo $btnpage;
-                        }
-                        $last = 'page='.$data->lastItem();
-                    ?>
-                    <li><a href="{{ route('article', $last) }}">Last</a></li>
-                    
-                </ul>
+                 
             </div>
              
 

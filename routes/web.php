@@ -45,6 +45,14 @@ Route::get('category/edit/{id}', 'CategoryController@edit')->name('category/edit
 Route::post('category/edit/{id}', 'CategoryController@update')->name('category/update/');
 
 
+Route::get('tags', 'TagsController@index')->name('tags');
+Route::get('tags/add', 'TagsController@add')->name('tags/add');
+Route::post('tags/store', 'TagsController@store')->name('tags/store');
+Route::get('tags/edit/{id}', 'TagsController@edit')->name('tags/edit/');
+Route::post('tags/update/{id}', 'TagsController@update')->name('tags/update/');
+Route::post('tags/delete/{id}', 'TagsController@delete')->name('tags/delete/');
+
+
 Route::get('newsletter', 'NewsletterController@index')->name('newsletter');
 Route::get('newsletter/publish', 'NewsletterController@publish')->name('newsletter/publish');
 
